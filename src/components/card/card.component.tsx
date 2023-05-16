@@ -1,6 +1,11 @@
+import { Monster } from '../../App';
 import './card.style.css';
 
-const Card = ({ monster }) => {
+type CardProps = {
+  monster: Monster;
+}
+
+const Card = ({ monster }: CardProps) => {
   const { name, email, id } = monster;
 
   return (
@@ -13,6 +18,6 @@ const Card = ({ monster }) => {
       <p>{email}</p>
     </div>
   );
-} 
+}
 
 export default Card;
